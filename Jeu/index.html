@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>jeu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Textures/marchand.png" type="image/png">
+</head>
+
+<body>
+    <div id="titrehaut" class="bloc">
+        <h1>jeu</h1>
+        <p id="version"></p>
+    </div>
+    <div id="game">
+        <div class="col">
+            <div class="grosbloc">
+                <h2>Informatiosn Suplémentaires</h2>
+                <div class="bloc">
+                    <button id="resetgame">Reset des données</button>
+                    <button id="form">Donner votre avis anonymement</button>
+                </div>
+            </div>
+            <div id="grosbloc1" class="grosbloc">
+                <h2>Actions Manuelles</h2>
+
+                <div class="tooltip">
+                    <button id="M_bois">Couper du bois</button>
+                    <span id="nmbrbois" class="tooltiptext">+1 Bois</span>
+                </div>
+                <div class="classpierre tooltip">
+                    <button id="M_pierre">Miner de la pierre</button>
+                    <span id="nmbrpierre" class="tooltiptext">+1 Pierre</span>
+                </div>
+                <div class="classfer tooltip">
+                    <button id="M_fer">Miner du fer</button>
+                    <span id="nmbrfer" class="tooltiptext">+1 Minerai de fer</span>
+                </div>
+            </div>
+            <div id="grosbloc2" class="grosbloc">
+                <h2>Stock</h2>
+                <div>
+                    <h3>Ressources :</h3>
+                    <div class="bloc">
+                        <div class="bloc">
+                            <img src="Textures/bois.png" alt="Bois" width="36" height="32" />
+                            <p>Bois :</p>
+                        </div>
+                        <p id="bois"></p>
+                        <p id="boisSec" class="persec"></p>
+                    </div>
+                    <div class="classpierre">
+                        <div class="bloc">
+                            <div class="bloc">
+                                <img src="Textures/pierre.png" alt="Pierre" width="32" height="32" />
+                                <p>Pierre :</p>
+                            </div>
+                            <p id="pierre"></p>
+                            <p id="pierreSec" class="persec"></p>
+                        </div>
+                    </div>
+                    <div class="classfer">
+                        <div class="bloc">
+                            <div class="bloc">
+                                <img src="Textures/mineraifer.png" alt="Minerai de fer" width="32" height="32" />
+                                <p>Fer :</p>
+                            </div>
+                            <p id="fer"></p>
+                            <p id="ferSec" class="persec"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="classcraft">
+                    <h3>Produits :</h3>
+                    <div class="bloc">
+                        <img src="Textures/planche.png" alt="Planche" width="32" height="32" />
+                        <p>Planche :</p>
+                        <p id="planche"></p>
+                    </div>
+                    <div class="bloc">
+                        <img src="Textures/pierrelisse.png" alt="Pierre lisse" width="32" height="32" />
+                        <p>Pierre lisse :</p>
+                        <p id="pierrelisse"></p>
+                    </div>
+                    <div class="classfer">
+                        <div class="bloc">
+                            <img src="Textures/lingotfer.png" alt="Lingot de fer" width="32" height="32" />
+                            <p>Lingot de fer :</p>
+                            <p id="lingotfer"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="grosbloc3" class="grosbloc">
+                <h2>Forge</h2>
+                <div id="bois1" class="project"><button>AutoBois (+0.2/sec) – 10 bois</button></div>
+                <div id="bois2" class="project"><button>AutoBois (+0.8/sec) – 30 bois</button></div>
+                <div id="clickbois1" class="project"><button>Click Bois (+1) – 50 bois</button></div>
+                <div id="bois3" class="project"><button>AutoBois (+1.5/sec) – 80 bois</button></div>
+                <div id="pioche1" class="project"><button>Pioche (Débloque Pierre) – 80 bois</button></div>
+                <div id="pierre1" class="project"><button>AutoPierre (+1/sec) – 100 bois + 20 pierre</button></div>
+                <div id="bois4" class="project"><button>AutoBois (+1.5/sec) – 100 bois + 20 pierre</button></div>
+                <div id="pierre2" class="project"><button>AutoPierre (+2/sec) – 150 bois + 75 pierre</button></div>
+                <div id="Double Bois/Pierre" class="project"><button>Double Ressources – 200 bois + 150 pierre</button>
+                </div>
+                <div id="craft1" class="project"><button>Table de Craft (Débloque Crafts) – 300 bois + 200
+                        pierre</button></div>
+                <div id="clicpierre1" class="project"><button>Click Pierre (+1) – 1 planche + 1 pierre lisse</button>
+                </div>
+                <div id="enchantement1" class="project"><button>Enchantement (Débloque Enchantements) – 5 planches + 5
+                        pierre lisse</button></div>
+                <div id="pioche2" class="project"><button>Pioche (Débloque Fer) – 25 planches + 25 pierres
+                        lisses</button></div>
+                <div id="fer1" class="project"><button>AutoFer (+0.1/sec) – 2 minerai de fer</button></div>
+                <div id="outil" class="project"><button>Outil (Débloque Blé) – 3 Lingots de Fer + 25 Planches</button>
+                </div>
+                <div id="multiprixcraft" class="project"><button>Prix craft *0.75 – 5 lingots de fer + 25
+                        planches + 50 pierre lisse</button></div>
+                <div id="fer2" class="project"><button>AutoFer (+0.4/sec) – 7 lingots de fer + 50 planches + 30 pierre
+                        lisse</button></div>
+                <div id="tpscharbon1" class="project"><button>Temps Charboon /2 – 10 lingots de fer + 70 planches + 45
+                        pierre lisse</button></div>
+            </div>
+            <div class="grosbloc classcraft">
+                <h2>Crafts</h2>
+                <p id="prixcraftplanche">100 bois → 1 planche</p>
+                <div class="bloc">
+                    <div id="craftplanche1"><button>1</button></div>
+                    <div id="craftplanche2"><button>5</button></div>
+                    <div id="craftplanche3"><button>10</button></div>
+                </div>
+                <p id="prixcraftpierrelisse">100 pierre → 1 pierre lisse</p>
+                <div class="bloc">
+                    <div id="craftpierrelisse1"><button>1</button></div>
+                    <div id="craftpierrelisse2"><button>5</button></div>
+                    <div id="craftpierrelisse3"><button>10</button></div>
+                </div>
+            </div>
+            <div class="classfer grosbloc">
+                <h2>Four</h2>
+                <div class="bloc">
+                    <img src="Textures/charbon.png" alt="Charbon" width="32" height="32" />
+                    <p>Charbon (1/10sec) :</p>
+                    <p id="charbon"></p>
+                </div>
+                <div class="bloc"><button id="fourfer">Lingot de fer (6 minerais de fer + 3 charbon)</button></div>
+                <div class="classble">
+                    <div class="bloc"><button id="fourpain">Pain (4 blé + 7 charbon)</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="enchant" class="classenchant grosbloc">
+                <h2>Enchantements</h2>
+                <div class="bloc">
+                    <p id="xpactuel">0</p>
+                    <p>/</p>
+                    <p id="xpdemandé">100</p>
+                </div>
+                <div class="bloc">
+                    <img src="Textures/fiolexp.png" alt="XP" width="24" height="32" />
+                    <p>Niveau :</p>
+                    <p id="niveau"></p>
+                </div>
+                <div class="bloc">
+                    <p id="xpsec">0</p>
+                    <p>x</p>
+                    <p id="xpmulti">1</p>
+                    <p>^</p>
+                    <p id="xpexpo">1</p>
+                </div>
+                <div class="bloc">
+                    <div class="tooltip"><button id="axpsec">+0.1</button><span class="tooltiptext">1 planche</span>
+                    </div>
+                    <div class="tooltip"><button id="axpmulti">+0.1</button><span class="tooltiptext">10 pierre
+                            lisse</span></div>
+                    <div class="tooltip"><button id="axpexpo">+0.01</button><span class="tooltiptext">20 fer</span>
+                    </div>
+                </div>
+                <div class="bloc">
+                    <p>XP/sec total :</p>
+                    <p id="xpTotalSec">0</p>
+                </div>
+                <button id="goenchant">Arbre de Compétence</button>
+            </div>
+            <div id="blocble" class="grosbloc classble">
+                <h2>Blé</h2>
+                <button id="gomarché">Aller au marché</button>
+                <div class="bloc">
+                    <img src="Textures/blé.png" alt="blé" width="24" height="32" />
+                    <p>Blé :</p>
+                    <p id="ble"></p>
+                </div>
+                <div class="bloc">
+                    <img src="Textures/pain.png" alt="pain" width="24" height="32" />
+                    <p>Pain :</p>
+                    <p id="pain"></p>
+                </div>
+                <div id="plantsble" class="bloc">
+                    <div class="plantblé">
+                        <button id="ble1"></button>
+                    </div>
+                    <div class="plantblé">
+                        <button id="ble2"></button>
+                    </div>
+                </div>
+                <div id="tps1" class="project">
+                    <button>Tps/2 (1ble)</button>
+                </div>
+                <div id="plantble2" class="project">
+                    <button>+1 Plant de blé (3 ble)</button>
+                </div>
+                <div id="doubleloot" class="project">
+                    <button>25% double Loot (5 ble)</button>
+                </div>
+                <div id="stockcharbon" class="project">
+                    <button>Stock Charbon (+5 max) (5 ble)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="enchantModal" class="modal">
+        <div id="contenuenchant" class="modal-content">
+            <span id="closeenchant" class="close">&times;</span>
+            <div class="bloc">
+                <p>Points Disponibles :</p>
+                <p id="points">0</p>
+            </div>
+            <div id="TreeWrapper">
+                <svg id="treeLinks"></svg>
+                <div id="Tree"></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div id="marcheModal" class="modal">
+        <div class="modal-content">
+            <span id="closeMarche" class="close">&times;</span>
+            <h2>Marché</h2>
+            <div id="contenuMarche">
+                <div class="zonemarche" id="marche1">
+                </div>
+                <div class="zonemarche" id="marche2">
+                </div>
+                <div class="zonemarche" id="marche3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

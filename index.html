@@ -3,42 +3,83 @@
 
 <head>
     <title>Le Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div id="grosbloc">
-        <p>Bienvenue dans le HUB</p>
-        <p>Liste des sites</p>
-        <div class="jeu">
-            <a href="bouton.html"><button id="btn">
-                    LE JEU DU BOUTON <br>
-                    Un jeux très simple et pas du tout ragant
-                </button></a>
-            <a href="stalinatrice.html"><button id="stalin">
-                    STALINATRICE <br>
-                    Une calculatrice soviétique
-                </button></a>
-            <a href="spe.html"><button id="quizz">
-                    QUIZZ SPÉCIALITÉS <br>
-                    Le meilleur moyen de savoir vos spécialités pour le lycée
-                </button></a>
-            <a href="flag.html"><button id="gtf">
-                    TROUVEZ LE DRAPEAU<br>
-                    Un jeux sans aucun piège
-                </button></a>
+    <div id="container">
+        <h1>Bienvenue dans le HUB de N0creeper</h1>
+
+        <div id="filters">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="nouveautes">Nouveautés</button>
+            <button class="filter-btn" data-filter="sites">Sites</button>
+            <button class="filter-btn" data-filter="abandonnés">Projets abandonnés</button>
+            <button class="filter-btn" data-filter="autres">Autres liens</button>
         </div>
-        <p>Autres Liens</p>
-        <div class="jeu">
-            <a href="https://scratch.mit.edu/users/N0creeper/"><button id="scratch">
-                    Mon compte Scratch
-                </button></a>
-            <a href="https://my.numworks.com/python/n0creeper"><button id="num">
-                    Mon compte Numworks (python)
-                </button></a>
+
+        <h2>Nouveautés</h2>
+        <div class="cards">
+            <a class="card" data-category="nouveautes" href="spe.html">
+                <img src="Images/Spe.png" alt="Quizz spécialités">
+                <h3>Quizz Spécialités</h3>
+                <p>Le meilleur moyen de choisir vos spécialités.</p>
+            </a>
+        </div>
+
+        <h2>Sites</h2>
+        <div class="cards">
+            <a class="card" data-category="sites" href="bouton.html">
+                <img src="Images/Button.png" alt="Jeu du bouton">
+                <h3>Le Jeu du Bouton</h3>
+                <p>Un jeu très simple et pas du tout rageant.</p>
+            </a>
+
+            <a class="card" data-category="sites" href="stalinatrice.html">
+                <img src="Images/Stalinatrice.png" alt="Stalinatrice">
+                <h3>Stalinatrice</h3>
+                <p>Une calculatrice soviétique.</p>
+            </a>
+
+            <a class="card" data-category="sites" href="flag.html">
+                <img src="Images/Flag.webp" alt="Trouvez le drapeau">
+                <h3>Trouvez le Drapeau</h3>
+                <p>Un jeu sans aucun piège.</p>
+            </a>
+        </div>
+
+        <h2>Projets Abandonés</h2>
+        <div class="cards">
+            <a class="card" data-category="abandonnés" href="Jeu/index.html">
+                <img src="Images/jeu.png" alt="Jeu">
+                <h3>Jeu</h3>
+                <p>Un jour possiblement</p>
+            </a>
+        </div>
+        
+        <h2>Autres liens</h2>
+        <div class="cards">
+            <a class="card" data-category="autres" href="https://scratch.mit.edu/users/N0creeper/">
+                <img src="Images/Scratch.png" alt="Scratch">
+                <h3>Mon compte Scratch</h3>
+                <p>Mes projets Scratch.</p>
+            </a>
+
+            <a class="card" data-category="autres" href="https://my.numworks.com/python/n0creeper">
+                <img src="Images/Numworks.png" alt="Numworks">
+                <h3>Mon compte Numworks</h3>
+                <p>Mes programmes Python.</p>
+            </a>
+
+            <a class="card" data-category="autres" href="https://github.com/N0creeper">
+                <img src="Images/GitHub.png" alt="GitHub">
+                <h3>Mon GitHub</h3>
+                <p>Mes autres projets (dont les projets python pas sur Numworks)</p>
+            </a>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,291 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  background: #111133;
+  color: #ffffff;
+  text-align: center;
+
+}
+
+#titrehaut {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#titrehaut h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+#titrehaut p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+  color: #dddddd;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: 480px 1fr 480px;
+  gap: 20px;
+  width: 100%;
+}
+
+.plantblé button {
+  width: 70px;
+  height: 70px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  #game {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grosbloc {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  color: #222222;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: visible;
+  width: auto;
+  max-width: 300px;
+}
+
+#grosbloc1 {
+  gap: 10px;
+}
+
+#grosbloc2 {
+  align-items: center;
+  padding: 15px 15px;
+}
+
+.grosbloc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.grosbloc h2 {
+  margin: 8px 0 12px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.bloc p {
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #222222;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #666666;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.project button {
+  width: 160px;
+  margin: 4px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip>button {
+  width: 100%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#enchant {
+  max-width: 400px;
+}
+
+#enchant .bloc,
+#enchant .tooltip>button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.classpierre,
+.classcraft,
+.classenchant,
+.classfer,
+.classble,
+#ble2 {
+  display: none;
+}
+
+#plantsble {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: #ffffff;
+  color: #222;
+  margin: 4% auto;
+  padding: 20px;
+  width: 60%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #222222;
+}
+
+#contenuMarche {
+  display: flex;
+  flex-direction: column;
+}
+
+.zonemarche {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  height: 100px;
+  margin: 10px;
+}
+
+.blocachat {
+  justify-content: space-between;
+}
+
+#contenuenchant {
+  max-width: none;
+  width: 1000px;
+}
+
+#Tree {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  height: 500px;
+}
+
+.treeCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 150px;
+}
+
+.treeCell button {
+  width: 180px;
+  height: 150px;
+}
+
+#TreeWrapper {
+  position: relative;
+}
+
+#treeLinks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#Tree {
+  position: relative;
+  z-index: 1;
+}
