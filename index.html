@@ -3,6 +3,7 @@
 
 <head>
     <title>Le Hub</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -14,13 +15,14 @@
             <button class="filter-btn active" data-filter="all">Tout</button>
             <button class="filter-btn" data-filter="nouveautes">Nouveautés</button>
             <button class="filter-btn" data-filter="sites">Sites</button>
+            <button class="filter-btn" data-filter="beta">Projets en Béta</button>
             <button class="filter-btn" data-filter="abandonnés">Projets abandonnés</button>
             <button class="filter-btn" data-filter="autres">Autres liens</button>
         </div>
 
         <h2>Nouveautés</h2>
         <div class="cards">
-            <a class="card" data-category="nouveautes" href="spe.html">
+            <a class="card" data-category="nouveautes" href="spe.html" style="--color:#c6f1c6;">
                 <img src="Images/Spe.png" alt="Quizz spécialités">
                 <h3>Quizz Spécialités</h3>
                 <p>Le meilleur moyen de choisir vos spécialités.</p>
@@ -29,29 +31,38 @@
 
         <h2>Sites</h2>
         <div class="cards">
-            <a class="card" data-category="sites" href="bouton.html">
+            <a class="card" data-category="sites" href="bouton.html" style="--color:#bbffff;">
                 <img src="Images/Button.png" alt="Jeu du bouton">
                 <h3>Le Jeu du Bouton</h3>
                 <p>Un jeu très simple et pas du tout rageant.</p>
             </a>
 
-            <a class="card" data-category="sites" href="stalinatrice.html">
+            <a class="card" data-category="sites" href="stalinatrice.html" style="--color:#cc0000;">
                 <img src="Images/Stalinatrice.png" alt="Stalinatrice">
                 <h3>Stalinatrice</h3>
                 <p>Une calculatrice soviétique.</p>
             </a>
 
-            <a class="card" data-category="sites" href="flag.html">
+            <a class="card" data-category="sites" href="flag.html" style="--color:#44ff44;">
                 <img src="Images/Flag.webp" alt="Trouvez le drapeau">
                 <h3>Trouvez le Drapeau</h3>
                 <p>Un jeu sans aucun piège.</p>
             </a>
         </div>
 
+        <h2>Projets en Béta</h2>
+        <div class="cards">
+            <a class="card" data-category="beta" href="" style="--color:#ffffff;">
+                <img src="" alt="Rien pour le moment">
+                <h3>Rien pour le moment</h3>
+                <p>Un jour possiblement</p>
+            </a>
+        </div>
+        
         <h2>Projets Abandonés</h2>
         <div class="cards">
-            <a class="card" data-category="abandonnés" href="Jeu/index.html">
-                <img src="Images/jeu.png" alt="Jeu">
+            <a class="card" data-category="abandonnés" href="Jeu/index.html" style="--color:#3838a0;">
+                <img src="Images/Jeu.png" alt="Jeu">
                 <h3>Jeu</h3>
                 <p>Un jour possiblement</p>
             </a>
@@ -59,19 +70,19 @@
         
         <h2>Autres liens</h2>
         <div class="cards">
-            <a class="card" data-category="autres" href="https://scratch.mit.edu/users/N0creeper/">
+            <a class="card" data-category="autres" href="https://scratch.mit.edu/users/N0creeper/" style="--color:#f7a637;">
                 <img src="Images/Scratch.png" alt="Scratch">
                 <h3>Mon compte Scratch</h3>
                 <p>Mes projets Scratch.</p>
             </a>
 
-            <a class="card" data-category="autres" href="https://my.numworks.com/python/n0creeper">
+            <a class="card" data-category="autres" href="https://my.numworks.com/python/n0creeper" style="--color:#ffb734;">
                 <img src="Images/Numworks.png" alt="Numworks">
                 <h3>Mon compte Numworks</h3>
                 <p>Mes programmes Python.</p>
             </a>
 
-            <a class="card" data-category="autres" href="https://github.com/N0creeper">
+            <a class="card" data-category="autres" href="https://github.com/N0creeper" style="--color:#8888ff;">
                 <img src="Images/GitHub.png" alt="GitHub">
                 <h3>Mon GitHub</h3>
                 <p>Mes autres projets (dont les projets python pas sur Numworks)</p>
