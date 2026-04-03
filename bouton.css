@@ -1,0 +1,100 @@
+body {
+    font-family: Arial;
+    background: #bbffff;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 40px;
+}
+
+
+button:active {
+    background: #66bbbb;
+    transform: scale(0.95);
+    transition-duration: 0.01s;
+}
+
+button:hover {
+    background: #66bbbb;
+    transition-duration: 0.01s;
+}
+
+#title {
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    min-width: 32%;
+    height: auto;
+    font-size: 70px;
+    background: #88dddd;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#game {
+    text-align: center;
+    display: none;
+}
+
+
+#midtrue {
+    text-align: center;
+    display: none;
+}
+
+#top {
+    padding: 10px;
+    align-items: top;
+}
+
+.back {
+    min-width: 0;
+    width: 150px;
+    height: 80px;
+    font-size: 50px;
+    background: #88dddd;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#midfalse {
+    text-align: center;
+    display: none;
+}
+
+.slider {
+    width: 500px;
+    background: #88dddd;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    border-radius: 5px;
+}
+
+
+.slider:hover {
+    background: #66bbbb;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #009089;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}

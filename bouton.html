@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Le jeu des boutons</title>
+    <link rel="stylesheet" href="bouton.css">
+    <script src="bouton.js" defer></script>
+</head>
+
+<body>
+    <a href="index.html">
+        <button class="back">HUB</button>
+    </a>
+    <button class="back" id="back">&#127968</button>
+    <span>Jeu créée en NSI (idée de Gabriel pour ceux qui le connaissent)</span>
+    <div id="title">
+        <h1>Bienvenue sur je jeu des boutons</h1>
+        <p>Votre objectif de trouver la sortie parmi ce labyrinthe de boutons</p>
+        <p>Êtes vous prêts?</p>
+        <input type="range" min="2" max="101" value="9" id="slider" class="slider">
+        <p id="output">Nombre de portes: 9</p>
+        <button id="start">Commencer</button>
+    </div>
+    <div id="game">
+        <p id="level">Test</p>
+        <button id="a">A</button>
+        <button id="b">B</button>
+        <button id="c">C</button>
+        <button id="d">D</button>
+        <button id="e">E</button>
+        <button id="f">F</button>
+        <button id="g">G</button>
+        <button id="h">H</button>
+        <button id="i">I</button>
+    </div>
+    <div id="midtrue">
+        <p>Bien joué !</p>
+        <button id="continue">Niveau suivant</button>
+    </div>
+    <div id="midfalse">
+        <p>Et non domage!</p>
+        <button id="restart">Retour Niveau 1 (les boutons ne changent pas)</button>
+    </div>
+    <div id="end">
+        <h1 id="titleend"></h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+html,
+body {
+    background: #cc0000;
+    font-family: "arial";
+    height: 100vh;
+}
+#else {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+
+#st {
+    background: #700000;
+    color: #ffeb3b;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+}
+
+#grosbloc {
+    background: #700000;
+    color: #ffeb3b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00000088;
+    text-align: center;
+    width: 300px auto;
+}
+
+#result {
+    background: #880000;
+    color: #ffeb3b;
+    height: 45px;
+    width: 100%;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0 5 0 5;
+    text-align: left;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    background: #aa0000;
+    color: #ffeb3b;
+    border: none;
+    height: 50px;
+    width: 45px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+button:focus {
+    background: #550000;
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+}
+
+#c,
+#e,
+#p {
+    width: 105px;
+}
+
+#playButton {
+    width: 200px;
+}
+
+#nombrep,
+#signe,
+#affichage {
+    margin: 0;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+#hub{
+    width: auto;
+    border: #550000 solid 1px;
+}

@@ -1,0 +1,80 @@
+body {
+    background: #003311;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    font-family: arial;
+}
+
+div {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bt {
+    display: flex;
+}
+
+#grosbloc {
+    background: #003311;
+    padding: 10px 10px 30px 10px;
+    border: 2px solid #44ff44;
+    margin: 50px auto;
+    border-radius: 1%;
+    box-shadow: 0 0 15px #66dd66aa;
+}
+
+#titre {
+    color: #44ff44;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #003311;
+}
+
+#text {
+    color: #44ff44;
+    font-size: 35px;
+}
+
+#start {
+    background: #44ff44;
+    color: #003311;
+    font-size: 50px;
+    border: none;
+    border-radius: 1%;
+    box-shadow: 0 0 15px #66dd66aa;
+}
+
+.imagee {
+    border: none;
+    border-radius: 1%;
+    background: #44ff44;
+    margin: 4px;
+    padding: 1px;
+    width: 375px;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px #44ff4488;
+}
+
+#hub{
+    font-size: 30px;
+    background: #44ff44;
+    color: #003311;
+    border: none;
+    border-radius: 5%;
+    box-shadow: 0 0 15px #66dd66aa;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
