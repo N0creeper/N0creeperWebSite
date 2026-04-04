@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Quizz Spécialités",
+        "desc": "Le meilleur moyen de choisir vos spécialités.",
+        "img": "Images/Spe.png",
+        "link": "spe.html",
+        "color": "#c6f1c6",
+        "categories": [
+            "nouveautes"
+        ]
+    },
+    {
+        "title": "Le Jeu du Bouton",
+        "desc": "Un jeu très simple et pas du tout rageant.",
+        "img": "Images/Button.png",
+        "link": "bouton.html",
+        "color": "#bbffff",
+        "categories": [
+            "sites"
+        ]
+    },
+    {
+        "title": "Stalinatrice",
+        "desc": "Une calculatrice soviétique.",
+        "img": "Images/Stalinatrice.png",
+        "link": "stalinatrice.html",
+        "color": "#cc0000",
+        "categories": [
+            "sites"
+        ]
+    },
+    {
+        "title": "Trouvez le Drapeau",
+        "desc": "Un jeu sans aucun piège.",
+        "img": "Images/Flag.webp",
+        "link": "flag.html",
+        "color": "#44ff44",
+        "categories": [
+            "sites"
+        ]
+    },
+    {
+        "title": "Rien pour le moment",
+        "desc": "Un jour possiblement",
+        "img": "",
+        "link": "",
+        "color": "#ffffff",
+        "categories": [
+            "beta"
+        ]
+    },
+    {
+        "title": "Jeu",
+        "desc": "Un jour possiblement",
+        "img": "Images/Jeu.png",
+        "link": "Jeu/index.html",
+        "color": "#3838a0",
+        "categories": [
+            "abandonnés"
+        ]
+    },
+    {
+        "title": "Mon compte Scratch",
+        "desc": "Mes projets Scratch.",
+        "img": "Images/Scratch.png",
+        "link": "https://scratch.mit.edu/users/N0creeper/",
+        "color": "#f7a637",
+        "categories": [
+            "autres"
+        ]
+    },
+    {
+        "title": "Mon compte Numworks",
+        "desc": "Mes programmes Python.",
+        "img": "Images/Numworks.png",
+        "link": "https://my.numworks.com/python/n0creeper",
+        "color": "#ffb734",
+        "categories": [
+            "autres"
+        ]
+    },
+    {
+        "title": "Mon GitHub",
+        "desc": "Mes autres projets (dont les projets python pas sur Numworks)",
+        "img": "Images/GitHub.png",
+        "link": "https://github.com/N0creeper",
+        "color": "#8888ff",
+        "categories": [
+            "autres"
+        ]
+    }
+]
