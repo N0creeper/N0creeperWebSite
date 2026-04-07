@@ -1,42 +1,141 @@
-const filterButtons = document.querySelectorAll('.filter-btn');
-const container = document.getElementById('cards-container');
+const projects = [
+    {
+        "title": "Quizz Spécialités",
+        "desc": "Le meilleur moyen de choisir vos spécialités.",
+        "img": "Images/Spe.png",
+        "link": "spe.html",
+        "color": "#c6f1c6",
+        "tags": [
+            "Site",
+            "Nouveau"
+        ]
+    },
+    {
+        "title": "Le Jeu du Bouton",
+        "desc": "Un jeu très simple et pas du tout rageant.",
+        "img": "Images/Button.png",
+        "link": "bouton.html",
+        "color": "#bbffff",
+        "tags": [
+            "Site",
+            "Jeu"
+        ]
+    },
+    {
+        "title": "Stalinatrice",
+        "desc": "Une calculatrice soviétique.",
+        "img": "Images/Stalinatrice.png",
+        "link": "stalinatrice.html",
+        "color": "#cc0000",
+        "tags": [
+            "Site"
+        ]
+    },
+    {
+        "title": "Trouvez le Drapeau",
+        "desc": "Un jeu sans aucun piège.",
+        "img": "Images/Flag.webp",
+        "link": "flag.html",
+        "color": "#44ff44",
+        "tags": [
+            "Site",
+            "Jeu"
+        ]
+    },
+    {
+        "title": "Jeu",
+        "desc": "Un jour possiblement",
+        "img": "Images/Jeu.png",
+        "link": "Jeu/index.html",
+        "color": "#3838a0",
+        "tags": [
+            "Abandoné",
+            "Jeu",
+            "Site"
+        ]
+    },
+    {
+        "title": "Mon compte Scratch",
+        "desc": "Mes projets Scratch.",
+        "img": "Images/Scratch.png",
+        "link": "https://scratch.mit.edu/users/N0creeper/",
+        "color": "#f7a637",
+        "tags": [
+        ]
+    },
+    {
+        "title": "Mon compte Numworks",
+        "desc": "Mes programmes Python.",
+        "img": "Images/Numworks.png",
+        "link": "https://my.numworks.com/python/n0creeper",
+        "color": "#ffb734",
+        "tags": [
+        ]
+    },
+    {
+        "title": "Mon GitHub",
+        "desc": "Mes autres projets (dont les projets python pas sur Numworks)",
+        "img": "Images/GitHub.png",
+        "link": "https://github.com/N0creeper",
+        "color": "#8888ff",
+        "tags": [
+        ]
+    }
+]
 
-fetch("projects.json")
-    .then(res => res.json())
-    .then(projects => {
-        projects.forEach(project => {
-            const card = document.createElement("a");
-            card.className = "card";
-            card.href = project.link;
-            card.dataset.category = project.categories.join(" ");
-            card.style.setProperty("--color", project.color);
+const filtersContainer = document.getElementById("filters");
+const cardsContainer = document.getElementById("cards-container");
 
-            card.innerHTML = `
-                <img src="${project.img}" alt="${project.title}">
-                <h3>${project.title}</h3>
-                <p>${project.desc}</p>
-            `;
+let allTags = new Set();
 
-            container.appendChild(card);
-        });
-        initFilters();
-        document.querySelector('.filter-btn[data-filter="all"]').click();
-    });
+projects.forEach(project => {
+    const card = document.createElement("a");
+    card.className = "card";
+    card.href = project.link;
+    card.style.setProperty("--color", project.color);
+    card.dataset.tags = project.tags.join(" ");
+    project.tags.forEach(t => allTags.add(t));
+
+    card.innerHTML = `
+        <img src="${project.img}" alt="${project.title}">
+        <h3>${project.title}</h3>
+        <p>${project.desc}</p>
+
+        <div class="tag-list">
+            ${project.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
+    `;
+
+    cardsContainer.appendChild(card);
+});
+
+filtersContainer.innerHTML = `
+    <button class="filter-btn active" data-filter="all">Tout</button>
+`;
+
+allTags.forEach(tag => {
+    const btn = document.createElement("button");
+    btn.className = "filter-btn";
+    btn.dataset.filter = tag;
+    btn.textContent = tag;
+    filtersContainer.appendChild(btn);
+});
 
 function initFilters() {
-    const cards = document.querySelectorAll('.card');
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".card");
 
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener("click", () => {
 
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+            filterButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
 
             const filter = btn.dataset.filter;
 
             cards.forEach(card => {
-                const categories = card.dataset.category.split(" ");
-                const show = (filter === "all" || categories.includes(filter));
+                const tags = card.dataset.tags.split(" ");
+                const show = (filter === "all" || tags.includes(filter));
 
                 if (show) {
                     card.style.display = "block";
@@ -53,3 +152,6 @@ function initFilters() {
         });
     });
 }
+
+initFilters();
+document.querySelector('.filter-btn[data-filter="all"]').click();

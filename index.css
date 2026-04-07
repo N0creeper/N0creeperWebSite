@@ -40,6 +40,23 @@ body::after {
     z-index: -2;
 }
 
+.tag-list {
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag {
+    background: color-mix(in srgb, var(--color) 40%, black);
+    border: 1px solid var(--color);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
 #container::before {
     background: repeating-linear-gradient(to bottom,
             rgba(255, 255, 255, 0.03) 0px,
