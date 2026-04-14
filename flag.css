@@ -1,80 +1,97 @@
 body {
-    background: #003311;
+    background: #002a0d;
     background-size: cover;
     text-align: center;
-    align-items: center;
-    font-family: arial;
-}
-
-div {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.bt {
-    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #44ff44;
 }
 
 #grosbloc {
     background: #003311;
-    padding: 10px 10px 30px 10px;
+    padding: 20px 20px 40px 20px;
     border: 2px solid #44ff44;
-    margin: 50px auto;
-    border-radius: 1%;
-    box-shadow: 0 0 15px #66dd66aa;
+    margin: 60px auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 25px #44ff4488;
 }
 
 #titre {
-    color: #44ff44;
-    font-size: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: #003311;
+    font-size: 55px;
+    margin: 10px 0;
+    text-shadow: 0 0 10px #44ff44aa;
 }
 
 #text {
-    color: #44ff44;
-    font-size: 35px;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#hub {
+    font-size: 26px;
+    background: #44ff44;
+    color: #003311;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin: 20px;
+    box-shadow: 0 0 12px #44ff4488;
+}
+
+#hub:hover {
+    background: #55ff55;
 }
 
 #start {
     background: #44ff44;
     color: #003311;
-    font-size: 50px;
+    font-size: 45px;
     border: none;
-    border-radius: 1%;
-    box-shadow: 0 0 15px #66dd66aa;
+    border-radius: 6px;
+    padding: 10px 25px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px #44ff4488;
+}
+
+#start:hover {
+    background: #55ff55;
+}
+
+.bt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .imagee {
     border: none;
-    border-radius: 1%;
+    border-radius: 6px;
     background: #44ff44;
-    margin: 4px;
-    padding: 1px;
-    width: 375px;
-    height: 225px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 330px;
+    height: 200px;
+    padding: 4px;
     box-shadow: 0 0 15px #44ff4488;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-#hub{
-    font-size: 30px;
-    background: #44ff44;
-    color: #003311;
-    border: none;
-    border-radius: 5%;
-    box-shadow: 0 0 15px #66dd66aa;
-
+.imagee:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px #55ff55aa;
 }
 
 img {
     width: 100%;
     height: 100%;
-    display: block;
+    object-fit: cover;
+    border-radius: 4px;
 }

@@ -1,32 +1,36 @@
-html,
-body {
-    background: #cc0000;
-    font-family: "arial";
+html, body {
+    background: #b30000;
+    font-family: Arial, sans-serif;
     height: 100vh;
-}
-#else {
     margin: 0;
     padding: 0;
+}
+
+#else {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding: 20px;
 }
+
 img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
 }
 
 #st {
     background: #700000;
     color: #ffeb3b;
-    font-size: 36px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
+    font-size: 34px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000055;
 }
 
 #grosbloc {
@@ -34,24 +38,26 @@ img {
     color: #ffeb3b;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px #00000088;
+    box-shadow: 0 0 25px #00000088;
     text-align: center;
-    width: 300px auto;
+    width: 90%;
+    max-width: 380px;
 }
 
 #result {
     background: #880000;
     color: #ffeb3b;
-    height: 45px;
+    height: 50px;
     width: 100%;
-    font-size: 25px;
+    font-size: 26px;
     border-radius: 10px;
     margin-bottom: 20px;
-    padding: 0 5 0 5;
-    text-align: left;
-    box-sizing: border-box;
-    justify-content: center;
+    padding: 0 10px;
     display: flex;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px #00000055;
 }
 
 button {
@@ -59,37 +65,49 @@ button {
     color: #ffeb3b;
     border: none;
     height: 50px;
-    width: 45px;
-    margin: 5px;
+    width: 50px;
+    margin: 6px;
     font-size: 20px;
     border-radius: 7px;
+    cursor: pointer;
+    transition: 0.15s ease;
+    box-shadow: 0 0 10px #00000055;
 }
 
-button:focus {
+button:hover {
+    background: #bb0000;
+}
+
+button:active {
     background: #550000;
     transform: scale(0.95);
-    transition-duration: 0.2s;
 }
 
-#c,
-#e,
-#p {
-    width: 105px;
+#c, #e, #p {
+    width: 110px;
 }
 
 #playButton {
-    width: 200px;
+    width: 220px;
+    margin-bottom: 15px;
 }
 
-#nombrep,
-#signe,
-#affichage {
+#nombrep, #signe, #affichage {
     margin: 0;
-    display: flex;
-    padding: 10px 0px 10px 0px;
+    padding: 0;
 }
 
-#hub{
+#hub {
     width: auto;
-    border: #550000 solid 1px;
+    padding: 8px 18px;
+    margin: 20px;
+    background: #aa0000;
+    border: 1px solid #550000;
+    border-radius: 6px;
+    font-size: 20px;
+    box-shadow: 0 0 10px #00000055;
+}
+
+#hub:hover {
+    background: #bb0000;
 }

@@ -2,14 +2,32 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #c6f1c6;
     color: #1f451f;
+    margin: 0;
+    padding: 0;
 }
 
 #else {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+}
+
+.back {
+    background: #ffffffcc;
+    border: 2px solid #7ac97a;
+    border-radius: 12px;
+    padding: 12px 25px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.15s ease;
+    box-shadow: 0 4px 12px #00000033;
+}
+
+.back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px #00000044;
 }
 
 h1 {
@@ -56,30 +74,11 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-#RéponseA {
-    background-color: #27ae60;
-    color: #fff;
-}
-
-#RéponseB {
-    background-color: #2ecc71;
-    color: #fff;
-}
-
-#RéponseC {
-    background-color: #95a5a6;
-    color: #fff;
-}
-
-#RéponseD {
-    background-color: #e74c3c;
-    color: #fff;
-}
-
-#RéponseE {
-    background-color: #c0392b;
-    color: #fff;
-}
+#RéponseA { background-color: #27ae60; color: #fff; }
+#RéponseB { background-color: #2ecc71; color: #fff; }
+#RéponseC { background-color: #95a5a6; color: #fff; }
+#RéponseD { background-color: #e74c3c; color: #fff; }
+#RéponseE { background-color: #c0392b; color: #fff; }
 
 #Resultats p {
     margin: 5px 0;
@@ -90,9 +89,4 @@ button:hover {
     font-size: 1.5em;
     font-weight: bold;
     color: #27ae60;
-}
-
-#top {
-    display: block;
-    justify-content: left;
 }
