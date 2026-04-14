@@ -5,10 +5,7 @@ const projects = [
         "img": "Images/Spe.png",
         "link": "spe.html",
         "color": "#c6f1c6",
-        "tags": [
-            "Site",
-            "Nouveau"
-        ]
+        "tags": ["Site", "Nouveau"]
     },
     {
         "title": "Le Jeu du Bouton",
@@ -16,10 +13,7 @@ const projects = [
         "img": "Images/Button.png",
         "link": "bouton.html",
         "color": "#bbffff",
-        "tags": [
-            "Site",
-            "Jeu"
-        ]
+        "tags": ["Site", "Jeu"]
     },
     {
         "title": "Stalinatrice",
@@ -27,9 +21,7 @@ const projects = [
         "img": "Images/Stalinatrice.png",
         "link": "stalinatrice.html",
         "color": "#cc0000",
-        "tags": [
-            "Site"
-        ]
+        "tags": ["Site"]
     },
     {
         "title": "Trouvez le Drapeau",
@@ -37,10 +29,7 @@ const projects = [
         "img": "Images/Flag.webp",
         "link": "flag.html",
         "color": "#44ff44",
-        "tags": [
-            "Site",
-            "Jeu"
-        ]
+        "tags": ["Site", "Jeu"]
     },
     {
         "title": "Jeu",
@@ -48,11 +37,7 @@ const projects = [
         "img": "Images/Jeu.png",
         "link": "Jeu/index.html",
         "color": "#3838a0",
-        "tags": [
-            "Abandoné",
-            "Jeu",
-            "Site"
-        ]
+        "tags": ["Abandoné", "Jeu", "Site"]
     },
     {
         "title": "Mon compte Scratch",
@@ -60,8 +45,7 @@ const projects = [
         "img": "Images/Scratch.png",
         "link": "https://scratch.mit.edu/users/N0creeper/",
         "color": "#f7a637",
-        "tags": [
-        ]
+        "tags": []
     },
     {
         "title": "Mon compte Numworks",
@@ -69,8 +53,7 @@ const projects = [
         "img": "Images/Numworks.png",
         "link": "https://my.numworks.com/python/n0creeper",
         "color": "#ffb734",
-        "tags": [
-        ]
+        "tags": []
     },
     {
         "title": "Mon GitHub",
@@ -78,10 +61,9 @@ const projects = [
         "img": "Images/GitHub.png",
         "link": "https://github.com/N0creeper",
         "color": "#8888ff",
-        "tags": [
-        ]
+        "tags": []
     }
-]
+];
 
 const filtersContainer = document.getElementById("filters");
 const cardsContainer = document.getElementById("cards-container");
@@ -122,7 +104,7 @@ allTags.forEach(tag => {
 });
 
 function initFilters() {
-    const filterButtons = document.querySelectorAll(".filter-btn");
+    const filterButtons = document.querySelectorAll("#filters .filter-btn");
     const cards = document.querySelectorAll(".card");
 
     filterButtons.forEach(btn => {
@@ -134,7 +116,7 @@ function initFilters() {
             const filter = btn.dataset.filter;
 
             cards.forEach(card => {
-                const tags = card.dataset.tags.split(" ");
+                const tags = card.dataset.tags ? card.dataset.tags.split(" ") : [];
                 const show = (filter === "all" || tags.includes(filter));
 
                 if (show) {
@@ -154,4 +136,52 @@ function initFilters() {
 }
 
 initFilters();
-document.querySelector('.filter-btn[data-filter="all"]').click();
+document.querySelector('#filters .filter-btn[data-filter="all"]').click();
+
+
+const changelog = [
+    {
+        version: "v1.0.2",
+        date: "14/02/2026",
+        text: "Ajout des Changelog" 
+    },
+    {
+        version: "v1.0.1",
+        date: "14/02/2026",
+        text: "Améliorations Graphiques des differentss sites"
+    },
+    {
+        version: "v1.0.0",
+        date: "07/04/2026",
+        text: "Refonte totale du hub + regroupement de tous mes projets"
+    }
+];
+
+const modal = document.getElementById("changelog-modal");
+const changelogBtn = document.getElementById("changelog-btn");
+const closeChangelog = document.getElementById("close-changelog");
+const changelogList = document.getElementById("changelog-list");
+
+changelogList.innerHTML = changelog
+    .map(entry => `
+        <div class="log-entry">
+            <div class="log-header">
+                <span class="log-version">${entry.version}</span>
+                <span class="log-date">${entry.date}</span>
+            </div>
+            <p class="log-text">${entry.text}</p>
+        </div>
+    `)
+    .join("");
+
+changelogBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+closeChangelog.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+});
