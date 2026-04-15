@@ -3,7 +3,7 @@ const projects = [
         "title": "Quizz Spécialités",
         "desc": "Le meilleur moyen de choisir vos spécialités.",
         "img": "Images/Spe.png",
-        "link": "spe.html",
+        "link": "Spe/index.html",
         "color": "#c6f1c6",
         "tags": ["Site", "Nouveau"]
     },
@@ -11,7 +11,7 @@ const projects = [
         "title": "Le Jeu du Bouton",
         "desc": "Un jeu très simple et pas du tout rageant.",
         "img": "Images/Button.png",
-        "link": "bouton.html",
+        "link": "Buttun/index.html",
         "color": "#bbffff",
         "tags": ["Site", "Jeu"]
     },
@@ -19,7 +19,7 @@ const projects = [
         "title": "Stalinatrice",
         "desc": "Une calculatrice soviétique.",
         "img": "Images/Stalinatrice.png",
-        "link": "stalinatrice.html",
+        "link": "Stalinatrice/index.html",
         "color": "#cc0000",
         "tags": ["Site"]
     },
@@ -27,7 +27,7 @@ const projects = [
         "title": "Trouvez le Drapeau",
         "desc": "Un jeu sans aucun piège.",
         "img": "Images/Flag.webp",
-        "link": "flag.html",
+        "link": "Flag/index.html",
         "color": "#44ff44",
         "tags": ["Site", "Jeu"]
     },
@@ -64,7 +64,28 @@ const projects = [
         "tags": []
     }
 ];
-
+const changelog = [
+    {
+        version: "v1.0.3",
+        date: "14/02/2026",
+        text: "Ajout de l'icone du site et refonte de l'arborescence" 
+    },
+    {
+        version: "v1.0.2",
+        date: "14/02/2026",
+        text: "Ajout de Changelog" 
+    },
+    {
+        version: "v1.0.1",
+        date: "14/02/2026",
+        text: "Améliorations Graphiques des differentss sites"
+    },
+    {
+        version: "v1.0.0",
+        date: "07/04/2026",
+        text: "Refonte totale du hub + regroupement de tous mes projets"
+    }
+];
 const filtersContainer = document.getElementById("filters");
 const cardsContainer = document.getElementById("cards-container");
 
@@ -137,25 +158,6 @@ function initFilters() {
 
 initFilters();
 document.querySelector('#filters .filter-btn[data-filter="all"]').click();
-
-
-const changelog = [
-    {
-        version: "v1.0.2",
-        date: "14/02/2026",
-        text: "Ajout des Changelog" 
-    },
-    {
-        version: "v1.0.1",
-        date: "14/02/2026",
-        text: "Améliorations Graphiques des differentss sites"
-    },
-    {
-        version: "v1.0.0",
-        date: "07/04/2026",
-        text: "Refonte totale du hub + regroupement de tous mes projets"
-    }
-];
 
 const modal = document.getElementById("changelog-modal");
 const changelogBtn = document.getElementById("changelog-btn");
