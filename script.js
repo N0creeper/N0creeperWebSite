@@ -37,7 +37,7 @@ const projects = [
         "img": "Images/Jeu.png",
         "link": "Jeu/index.html",
         "color": "#3838a0",
-        "tags": ["Abandoné", "Jeu", "Site"]
+        "tags": ["Abandonné", "Jeu", "Site"]
     },
     {
         "title": "Mon compte Scratch",
@@ -68,7 +68,7 @@ const changelog = [
     {
         version: "v1.0.3",
         date: "14/02/2026",
-        text: "Ajout de l'icone du site et refonte de l'arborescence" 
+        text: "Ajout de l'icone du site" 
     },
     {
         version: "v1.0.2",

@@ -1,37 +1,55 @@
 <!doctype html>
 
 <head>
-    <title>Le Hub</title>
+    <title>LeMatireWorld</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../Images/favicon.ico">
 </head>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <a href="../index.html"><button id="hub">HUB</button></a>
+
     <div id="GameZone">
+
         <div id="jaugezone">
             <p>LeMaitre Jauge</p>
             <div class="jauge">
                 <div id="remplissage" style="width: 60%;"></div>
             </div>
         </div>
+
         <div class="bloc" id="ClickZone">
             <h2>ClickZone</h2>
             <button id="click">CLIQUE ESCLAVE</button>
+            <button id="boost">BOOST (EXERCICE)</button>
         </div>
 
         <div class="bloc" id="Infos">
             <h2>Informations</h2>
             <p id="money">Coins : </p>
         </div>
-                <div class="bloc" id="Infos">
-            <h2>Formules ou x=%de jauge *100</h2>
-            <p id = "formule_coin_gain"></p>
+
+        <div class="bloc" id="Infos2">
+            <h2>Formules (x=%de jauge *100)</h2>
+            <p id="formule_coin_gain"></p>
         </div>
 
     </div>
+
+    <div id="Exercice" class="bloc" style="visibility:hidden;">
+        <h2>TRAVAILLE OU SUBIT</h2>
+        <p id="Enonce"></p>
+
+        <div id="Reponses"></div>
+
+        <p id="Feedback"></p>
+    </div>
+
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
